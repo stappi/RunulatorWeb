@@ -1,0 +1,9 @@
+<div class="pill-button" 
+     [ngClass]="{'pill-button-selected' : runService.isParameterSelected(parameter), 
+                 'pill-button-disabled' : runService.isParameterDisabled(parameter),
+                 'pill-button-enabled' : !runService.isParameterDisabled(parameter) && !runService.isParameterSelected(parameter)}" 
+     (click)="!runService.isParameterDisabled(parameter) && runService.selectParameter(parameter);">     
+    <mat-icon *ngIf="runService.isParameterSelected(parameter)" fontIcon="check_box"/>
+    <mat-icon *ngIf="!runService.isParameterSelected(parameter)" fontIcon="check_box_outline_blank"/>
+    <div class="text">{{parameter.label}}</div>
+</div>

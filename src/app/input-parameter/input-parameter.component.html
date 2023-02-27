@@ -1,0 +1,45 @@
+<div class="parameter" [ngClass]="{'parameter-disabled' : runService.isInputDisabled()}">
+    <div class="label">{{parameter.label}}</div>
+
+    <mat-form-field *ngIf="isDinstance()" appearance="fill">
+        <mat-label>{{parameter.unit}}</mat-label>
+        <input type="text" matInput [matAutocomplete]="auto" onlyNumber>
+        <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+            <mat-option *ngFor="let distance of filteredOptions | async" [value]="distance">
+                {{distance.label}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="isRunTime()">
+        <mat-label>{{parameter.unit}}</mat-label>
+        <input [disabled]="runService.isInputDisabled()" matInput type="time" placeholder="HH:mm:ss" min="08:00:00"
+            max="17:00:00">
+    </mat-form-field>
+
+    <!--
+    <div class="ngx-timepicker-field-example">
+        <ngx-timepicker-field [format]="24" />
+    </div>
+    <mat-form-field>
+        <mat-label>{{parameter.unit}}</mat-label>
+        <input matInput type="number" id="tentacles" name="tentacles" min="10" max="100">
+    </mat-form-field>
+    
+    -->
+
+    <mat-form-field *ngIf="isPace()">
+        <mat-label>{{parameter.unit}}</mat-label>
+        <input [disabled]="runService.isInputDisabled()" (click)="onOpenDialogClick()" matInput type="time">
+    </mat-form-field>
+
+    <mat-form-field *ngIf="isSpeed()">
+        <mat-label>{{parameter.unit}}</mat-label>
+        <input [disabled]="runService.isInputDisabled()" matInput type="text" onlyNumber>
+    </mat-form-field>
+
+    <mat-form-field *ngIf="isNone()">
+        <mat-label> </mat-label>
+        <input [disabled]="true" matInput placeholder="Bitte Parameter wählen" value="">
+    </mat-form-field>
+</div>

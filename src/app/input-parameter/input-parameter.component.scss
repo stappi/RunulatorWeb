@@ -1,0 +1,28 @@
+.parameter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+    .label {
+        margin-top: -20px;
+        width: 200px;
+    }
+
+    input {
+        text-align: right;
+    }
+
+    mat-form-field {
+        width: 100%;
+    }
+}
+
+.parameter-disabled {
+    color: rgba($color: #000000, $alpha: .3);
+
+    input {
+        color: rgba($color: #000000, $alpha: .3);
+    }
+}

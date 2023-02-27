@@ -1,0 +1,4 @@
+<div class="pill-bar">
+    <app-pill-button *ngFor="let i of [0, 1, 2, 3]" [parameter]="parameters[i]" />
+</div>
+<p class="description">{{runService.getInputSelectionText()}}</p>

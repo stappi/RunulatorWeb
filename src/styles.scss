@@ -1,0 +1,45 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    background-color: rgba(0,0,0, 0.05);
+    font-family: 'Lato', sans-serif;
+}
+
+.margin-bottom-16 {
+    margin-bottom: 16px;
+}
+
+h1 {
+    font-size: 20px;
+    color: rgba($color: #4FDADB, $alpha: 1.0);
+    margin-left: 5px;
+}
+
+p {
+    color: rgba($color: #2C5A8F, $alpha: 1.0);
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.padding-16 {
+    padding: 16px;
+}
+
+html, body { height: 100%; }
+
+.main {
+    display: flex;
+}
+
+.area-box {
+    background-color: white;
+    width: 600px;
+    padding: 20px 10px 5px 20px;
+    margin: 40px;
+    box-shadow: 2px 2px 2px 2px rgb(0 0 0 / 10%);
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

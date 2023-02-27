@@ -1,0 +1,7 @@
+<div class="area-box">
+    <h1>Run Result</h1>
+    <app-run-result-parameter label="Cadence Count" unit="Steps per Minute"/>
+    <app-run-result-parameter label="Calories" unit="kcal"/>
+    <app-run-result-parameter [label]="runService.getResultParameter1().label" [unit]="runService.getResultParameter1().unit"/>
+    <app-run-result-parameter [label]="runService.getResultParameter2().label" [unit]="runService.getResultParameter2().unit"/>
+</div>
